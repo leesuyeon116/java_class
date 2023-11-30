@@ -14,8 +14,8 @@ public class Ex01_Variables {
 		String mobile = "010-1234-5678";
 		
 		// 변수값 출력
-		System.out.println(name);
-		System.out.println("name");
+		System.out.println(name);	// name의 값을 출력
+		System.out.println("name");	// 문자열 "name"을 그대로 출력함 
 //		System.out.println(name1); 없는 변수 쓰면 오류 뜸
 		System.out.println("저의 이름은 : " + name);
 		System.out.println("저의 이름은 : " + name + "입니다"); // + 기호 두 가지 의미 : 1. 숫자와 숫자끼리는 덧셈을 의미 / 2. 문자열끼리는 연결을 의미 

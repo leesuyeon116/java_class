@@ -10,12 +10,12 @@ public class Ex01_Arithmeticoperator {
 		 * 출력방법
 		 * System.out.println(num1 + num2)
 		 */
-		// int num1 = 10, num2 = 7; // 같으면 이렇게도 가능
-		int num1 = 10;
-		int num2 = 7;
+		// int num1 = 10, num2 = 7; // 한 번에 여러 변수를 선언, 만약 두 변수가 동일한 데이터 형식 아니면 사용 X
+		int num1 = 10; 
+		int num2 = 7; 
 		System.out.println(num1 + num2);
-		System.out.println("덧셈결과: " + num1 + num2);	// XX
-		System.out.println("덧셈결과: " + (num1 + num2)); // 괄호 안에 있는 거부터 계산 
+		System.out.println("덧셈결과: " + num1 + num2);	// 이렇게 적으면 두 숫자를 이어붙인 값이 출력됨 
+		System.out.println("덧셈결과: " + (num1 + num2)); // ()괄호 안 숫자의 연산을 먼저 수행 
 		System.out.println(num1 - num2);
 		System.out.println(num1 * num2);
 		System.out.println(num1 / num2);
