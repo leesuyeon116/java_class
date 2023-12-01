@@ -1,8 +1,9 @@
 package ch02_operator;
 
 public class Ex03_AssignmentOperator {
-
+	
 	public static void main(String[] args) {
+		//  논리연산자
 		int num1 = 10, num2 = 7;
 		System.out.println("num1: " + num1 + " num2: " + num2);
 		// 대입연산자 활용

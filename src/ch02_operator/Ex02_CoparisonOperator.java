@@ -1,8 +1,9 @@
 package ch02_operator;
 
 public class Ex02_CoparisonOperator {
-
+	
 	public static void main(String[] args) {
+		// 대입연산자
 		System.out.println(10 > 5);
 		System.out.println(10 < 5);
 		boolean result = 77 <= 60;

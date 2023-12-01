@@ -6,7 +6,7 @@ public class Ex02_Calculator {
 
 	public static void main(String[] args) {
 		/**
-		 * 정수 2개를 각각 스캐너로 num1, num2에 입력받아서 입력받은 수의 합을 출력하세요. 
+		 * 정수 2개를 각각 스캐너로 num1, num2에 입력받아서 입력받은 수의 합을 출력하세요.
 		 */
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("첫번째 숫자: ");
