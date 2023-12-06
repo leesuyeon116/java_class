@@ -37,6 +37,16 @@ public class Ex01_IfBasic {
 		} else {
 			System.out.println("비교 불가");
 		}
+
 	}
-	
+
 }
+
+
+
+
+
+
+
+
+
