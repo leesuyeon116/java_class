@@ -15,9 +15,12 @@ public class Ex07_WhileEx {
         int num = 0;
         // 부호용 변수
         int s = 1;
+        // 반복 여부 결정하는 변수
         boolean run = true;
         while (run) {
             sum += num;
+
+            // 합계가 100 이상이면 반복 종료
             if (sum >= 100) {
                 run = false;
             } else {
