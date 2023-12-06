@@ -15,7 +15,6 @@ public class Ex07_WhileEx {
         int num = 0;
         // 부호용 변수
         int s = 1;
-        // 반복 여부 결정하는 변수
         boolean run = true;
         while (run) {
             sum += num;
