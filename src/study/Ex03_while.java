@@ -45,7 +45,7 @@ public class Ex03_while {
                     run = false;
                     break;
                 default:
-                    System.out.println("잘못 선택하셨습니다.");
+                    System.out.println("잘못 선택하셨습니다.ㅠㅠ");
             }
         }
 
