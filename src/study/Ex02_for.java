@@ -9,7 +9,7 @@ public class Ex02_for {
             }
         }
 
-
+//  별 찍기 패턴 출력
         for(int i=0; i<5; i++){
             for(int k=1; k<5-i; k++){
                 System.out.print(" ");
