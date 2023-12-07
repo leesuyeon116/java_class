@@ -1,6 +1,7 @@
 package ch09_array;
 
 import java.util.Scanner;
+
 public class Ex03_ArrayEx {
     public static void main(String[] args) {
         /**
@@ -29,4 +30,3 @@ public class Ex03_ArrayEx {
         System.out.println("평균 = " + sum / numbers1.length);
     }
 }
-
