@@ -28,6 +28,7 @@ public class Ex05_ArrayEx {
         //  거스름돈|동전 = 몫(갯수)
         for (int i = 0; i < coin.length; i++) {
             count = change / coin [i];
+            // 동전의 갯수 출력
             System.out.println(coin[i] + "원 동전: " + count + "개");
             //  나머지를 다음 번 계산에 활용
             change = change % coin[i];
