@@ -22,6 +22,7 @@ public class Ex05_ArrayEx {
          */
         int[] coin = {500, 1000, 50, 10};
         Scanner scan = new Scanner(System.in);
+        //  거스름돈 입력 받기
         System.out.println("거스름돈 입력: ");
         int change = scan.nextInt();
         int count = 0;
