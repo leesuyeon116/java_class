@@ -32,5 +32,8 @@ public class Ex09_ArrayEx {
          * ------------------------------------------------------
          * 선택>
          */
+        int studentNum = 0;
+
+        int[] scores = new int[0];
     }
 }
