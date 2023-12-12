@@ -12,6 +12,11 @@ public class Calculator {
      * 실행내용
      *  - 매개변수로 전달 받은 2개 값의 합을 출력
      */
+    /**
+     *
+     * @param num1
+     * @param num2
+     */
     public void sum(int num1, int num2) {
         System.out.println("합계: " + (num1 + num2));
     }
@@ -36,6 +41,12 @@ public class Calculator {
      * return: int 타입
      * 실행내용
      *  - 매개변수로 전달 받은 2개 값의 곱 결과를 리턴
+     */
+    /**
+     *
+     * @param num1
+     * @param num2
+     * @return
      */
     public int mul(int num1, int num2) {
         int result = num1 * num2;
