@@ -15,7 +15,7 @@ public class Student {
 
     //  각 필드의 getter/setter 메서드
     public String getStudentName() {
-        return studentName;
+        return studentName; // this 굳이 필요 없음
     }
 
     public void setStudentName(String studentName) {
