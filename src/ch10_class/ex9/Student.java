@@ -8,6 +8,10 @@ public class Student {
     학과(StudentMajor)
     전화번호(StudentMobile)
      */
+    private String studentName;
+    private String studentNumber;
+    private String studentMajor;
+    private String studentMobile;
 
     //  각 필드의 getter/setter 메서드
     public String getStudentName() {
@@ -43,6 +47,7 @@ public class Student {
     }
 
 
+
     // 기본생성자
     public Student() {
         this.studentName = "";
@@ -60,4 +65,11 @@ public class Student {
     }
 
     // 필드에 저장된 값을 출력하는 print() 메서드
+    public void print() {
+        System.out.println("이름: " + studentName);
+        System.out.println("학번: " + studentNumber);
+        System.out.println("학과: " + studentMajor);
+        System.out.println("전화번호: " + studentMobile);
+    }
 }
+
