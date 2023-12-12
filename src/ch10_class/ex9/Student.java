@@ -9,9 +9,14 @@ public class Student {
     전화번호(StudentMobile)
      */
 
-    // 각 필드의 getter/setter 메서드
+    //  각 필드의 getter/setter 메서드
+
 
     // 기본생성자
+    private String studentName;
+    private String studentNumber;
+    private String studentMajor;
+    private String studentMobile;
 
     // 모든 필드를 매개변수로 하는 생성자
 
