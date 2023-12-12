@@ -10,13 +10,46 @@ public class Student {
      */
 
     //  각 필드의 getter/setter 메서드
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public String getStudentNumber() {
+        return studentNumber;
+    }
+
+    public void setStudentNumber(String studentNumber) {
+        this.studentNumber = studentNumber;
+    }
+
+    public String getStudentMajor() {
+        return studentMajor;
+    }
+
+    public void setStudentMajor(String studentMajor) {
+        this.studentMajor = studentMajor;
+    }
+
+    public String getStudentMobile() {
+        return studentMobile;
+    }
+
+    public void setStudentMobile(String studentMobile) {
+        this.studentMobile = studentMobile;
+    }
 
 
     // 기본생성자
-    private String studentName;
-    private String studentNumber;
-    private String studentMajor;
-    private String studentMobile;
+    public Student() {
+        this.studentName = "";
+        this.studentNumber = "";
+        this.studentMajor = "";
+        this.studentMobile = "";
+    }
 
     // 모든 필드를 매개변수로 하는 생성자
 
