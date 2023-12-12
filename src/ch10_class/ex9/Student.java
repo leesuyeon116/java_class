@@ -52,6 +52,12 @@ public class Student {
     }
 
     // 모든 필드를 매개변수로 하는 생성자
+    public Student(String studentName, String studentNumber, String studentMajor, String studentMobile) {
+        this.studentName = studentName;
+        this.studentNumber = studentNumber;
+        this.studentMajor = studentMajor;
+        this.studentMobile = studentMobile;
+    }
 
     // 필드에 저장된 값을 출력하는 print() 메서드
 }
