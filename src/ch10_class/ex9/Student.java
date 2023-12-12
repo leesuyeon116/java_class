@@ -46,7 +46,6 @@ public class Student {
         this.studentMobile = studentMobile;
     }
 
-
     // 기본생성자
     public Student() {
         this.studentName = "";
