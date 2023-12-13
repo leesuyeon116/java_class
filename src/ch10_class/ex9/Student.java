@@ -71,7 +71,7 @@ public class Student {
      * parameter: x
      */
     @Override   //  Override Overloading 차이 -> 학습일지 참고
-    public String toString() {
+    public String toString() {  // ALT + Insert 생성 단축키
         return "Student{" +
                 "studentName='" + studentName + '\'' +
                 ", studentNumber='" + studentNumber + '\'' +
