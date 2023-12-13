@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BoardMain {
     public static void main(String[] args) {
-        /**
+        /*
          * 메뉴
          * 1. 글작성(매개변수 있는 생성자이용)
          *      글작성 정보는 스캐너로 받음. 글번호도 같이 입력함.
@@ -15,14 +15,16 @@ public class BoardMain {
         Scanner scanner = new Scanner(System.in);
         boolean run = true;
         int selectNo = 0;
+        Board board = null;
 
         while (run) {
-            System.out.println("--------------------------------------------------------------");
+            System.out.println("-------------------------------------------");
             System.out.println("1.글작성 | 2.글조회 | 3.종료");
-            System.out.println("--------------------------------------------------------------");
+            System.out.println("-------------------------------------------");
             System.out.print("선택> ");
             selectNo = scanner.nextInt();
             if (selectNo == 1) {
+
 
             } else if (selectNo == 2) {
 
