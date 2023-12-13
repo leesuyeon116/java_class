@@ -14,32 +14,33 @@ public class Student {
     private String studentMobile;
 
     //  각 필드의 getter/setter 메서드
+    // ALT + Insert getter/setter 생성 단축키
     public String getStudentName() {
-        return studentName; // this 굳이 필요 없음
-    }
-
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+        return studentName;
     }
 
     public String getStudentNumber() {
         return studentNumber;
     }
 
-    public void setStudentNumber(String studentNumber) {
-        this.studentNumber = studentNumber;
-    }
-
     public String getStudentMajor() {
         return studentMajor;
     }
 
-    public void setStudentMajor(String studentMajor) {
-        this.studentMajor = studentMajor;
-    }
-
     public String getStudentMobile() {
         return studentMobile;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public void setStudentNumber(String studentNumber) {
+        this.studentNumber = studentNumber;
+    }
+
+    public void setStudentMajor(String studentMajor) {
+        this.studentMajor = studentMajor;
     }
 
     public void setStudentMobile(String studentMobile) {
@@ -48,13 +49,10 @@ public class Student {
 
     // 기본생성자
     public Student() {
-        this.studentName = "";
-        this.studentNumber = "";
-        this.studentMajor = "";
-        this.studentMobile = "";
+
     }
 
-    // 모든 필드를 매개변수로 하는 생성자
+    // 모든 필드를 매개변수로 하는 생성자   // ALT + Insert 생성 단축키
     public Student(String studentName, String studentNumber, String studentMajor, String studentMobile) {
         this.studentName = studentName;
         this.studentNumber = studentNumber;
@@ -64,10 +62,22 @@ public class Student {
 
     // 필드에 저장된 값을 출력하는 print() 메서드
     public void print() {
-        System.out.println("이름: " + studentName);
-        System.out.println("학번: " + studentNumber);
-        System.out.println("학과: " + studentMajor);
-        System.out.println("전화번호: " + studentMobile);
+        System.out.println("이름: " + studentName + " 학번: " + studentNumber + " 학과: " + studentMajor + " 전화번호: " + studentMobile);
+    }
+
+    /**
+     * method name: toString
+     * return type: String
+     * parameter: x
+     */
+    @Override   //  Override Overloading 차이 -> 학습일지 참고
+    public String toString() {
+        return "Student{" +
+                "studentName='" + studentName + '\'' +
+                ", studentNumber='" + studentNumber + '\'' +
+                ", studentMajor='" + studentMajor + '\'' +
+                ", studentMobile='" + studentMobile + '\'' +
+                '}';
     }
 }
 
