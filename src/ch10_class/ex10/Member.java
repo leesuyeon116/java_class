@@ -11,11 +11,13 @@ package ch10_class.ex10;
  *  생성자 2가지
  */
 public class Member {
+    //멤버 변수
     private String memberEmail;
     private String memberPassword;
     private String memberName;
     private String memberMobile;
 
+    // getter, setter 메서드
     public String getMemberEmail() {
         return memberEmail;
     }

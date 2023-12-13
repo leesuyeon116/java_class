@@ -1,6 +1,5 @@
 package ch10_class.ex10;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class MemberMain {
@@ -18,13 +17,15 @@ public class MemberMain {
         Member member = null;
 
         while (run) {
-            System.out.println("--------------------------------------");
-            System.out.println("1. 회원가입 | 2. 로그인 | 3. 종료");
-            System.out.println("--------------------------------------");
-            System.out.println("선택 -> ");
+            System.out.println("--------------------------------------------------------------");
+            System.out.println("1.회원가입 | 2.로그인 | 3.종료");
+            System.out.println("--------------------------------------------------------------");
+            System.out.print("선택> ");
             selectNo = scanner.nextInt();
             if (selectNo == 1) {
                 member = new Member();
+
+//                회원 정보 입력
                 System.out.print("이메일: ");
                 String memberEmail = scanner.next();
                 System.out.print("비밀번호: ");
@@ -33,21 +34,28 @@ public class MemberMain {
                 String memberName = scanner.next();
                 System.out.print("전화번호: ");
                 String memberMobile = scanner.next();
+
+//                 회원 정보 저장
                 member.setMemberEmail(memberEmail);
                 member.setMemberPassword(memberPassword);
                 member.setMemberName(memberName);
                 member.setMemberMobile(memberMobile);
             } else if (selectNo == 2) {
+//                로그인 정보 입력
                 System.out.print("이메일: ");
                 String memberEmail = scanner.next();
                 System.out.print("비밀번호: ");
                 String memberPassword = scanner.next();
+
+//                로그인 여부 확인
                 boolean loginResult = member.memberLogin(memberEmail, memberPassword);
+//                로그인 결과 출력
                 if (loginResult) {
                     System.out.println("로그인 성공");
                 } else {
                     System.out.println("로그인 실패");
                 }
+//                종료
             } else if (selectNo == 3) {
                 run = false;
             }
