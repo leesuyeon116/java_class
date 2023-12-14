@@ -1,4 +1,4 @@
-package ch11_array.ex02;
+package ch11_array.ex2;
 
 import java.util.ArrayList;
 import java.util.List;
