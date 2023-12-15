@@ -1,5 +1,7 @@
 package ch11_classes.ex01;
 
+import java.util.List;
+
 public class StudentService {
     StudentRepository studentRepository = new StudentRepository();
     /**
@@ -25,7 +27,7 @@ public class StudentService {
      */
     public void method3() {
         System.out.println("StudentService.method3");
-        StudentDTO studentDTO = new StudentDTO("학생1", "20231111", "컴퓨터공학", "010-1111-1111");
+        StudentDTO studentDTO = new StudentDTO("학생1", "20231215", "문헌정보학", "010-1234-5678");
 //        StudentDTO studentDTO = new StudentDTO();
         boolean result = studentRepository.method3(studentDTO);
         System.out.println("result = " + result);
@@ -33,6 +35,16 @@ public class StudentService {
             System.out.println("학생등록 성공");
         } else {
             System.out.println("학생등록 실패");
+        }
+    }
+
+    /**
+     * Repository로 부터 List를 리턴 받아 for문으로 출력
+     */
+    public void method4() {
+        List<StudentDTO> studentDTOList = studentRepository.method4();
+        for (StudentDTO studentDTO: studentDTOList) {
+            System.out.println("studentDTO = " + studentDTO);
         }
     }
 

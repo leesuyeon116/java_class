@@ -31,12 +31,19 @@ public class StudentRepository {
 
     public boolean method3(StudentDTO studentDTO) {
 //        if (studentDTO.getId() == null) {
-//            System.out.println("큰일났다");
+//            System.out.println("어렵다");
 //        }
         System.out.println("studentDTO = " + studentDTO);
 //        boolean result = studentDTOList.add(studentDTO);
 //        return result;
         return studentDTOList.add(studentDTO);
+    }
+
+    /**
+     * return type: List
+     */
+    public List<StudentDTO> method4() {
+        return studentDTOList;
     }
 }
 
