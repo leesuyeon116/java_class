@@ -26,7 +26,7 @@ public class StudentRepository {
      * method name: method3
      * parameter: StudentDTO
      * return: boolean
-     * 실행내용: 전달받은 DTO 객체를 List에 저장하고 결과를 리턴     *
+     * 실행내용: 전달받은 DTO 객체를 List에 저장하고 결과를 리턴
      */
 
     public boolean method3(StudentDTO studentDTO) {
@@ -44,6 +44,23 @@ public class StudentRepository {
      */
     public List<StudentDTO> method4() {
         return studentDTOList;
+    }
+
+    /**
+     * method name: method5
+     * parameter: Long
+     * return: studentDTO
+     */
+    public StudentDTO method5(Long id) {
+        //  id와 일치하는 데이터가 있으면 해당 DTO 객체를 리턴하고
+        // 없으면 null을 리턴
+        StudentDTO studentDTO = null;
+        for (int i = 0; i < studentDTOList.size(); i++) {
+            if (id.equals(studentDTOList.get(i).getId())){
+                studentDTO = studentDTOList.get(i);
+            }
+        }
+        return studentDTO;
     }
 }
 
