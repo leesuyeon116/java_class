@@ -1,5 +1,6 @@
 package ch11_classes.ex03_member;
 
+import java.util.Scanner;
 public class MemberMain {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
