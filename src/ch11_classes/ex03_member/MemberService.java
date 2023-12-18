@@ -1,5 +1,6 @@
 package ch11_classes.ex03_member;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class MemberService {
@@ -37,6 +38,14 @@ public class MemberService {
             loginEmail = memberEmail;
         } else {
             System.out.println("이메일 또는 비밀번호가 틀립니다ㅠㅠ");
+        }
+    }
+
+    // 목록기능
+    public void findAll() {
+        List<MemberDTO> memberDTOList = memberRepository.findAll();
+        for (MemberDTO memberDTO: memberDTOList) {
+            System.out.println("memberDTO = " + memberDTO);
         }
     }
 }
