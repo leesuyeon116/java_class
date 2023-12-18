@@ -19,19 +19,19 @@ public class MemberMain {
                 memberService.save();
             } else if (selectNo == 2) {
                 // 호출하는 문장 작성
-
+                memberService.login();
             } else if (selectNo == 3) {
                 // 호출하는 문장 작성
-
+                memberService.findAll();
             } else if (selectNo == 4) {
                 // 호출하는 문장 작성
-
+                memberService.update();
             } else if (selectNo == 5) {
                 // 호출하는 문장 작성
-
+                memberService.delete();
             } else if (selectNo == 6) {
                 // 호출하는 문장 작성
-
+                memberService.logout();
             } else if (selectNo == 0) {
                 run = false;
             }
