@@ -18,6 +18,7 @@ public class BoardMain {
             if (selectNo == 1) {
                 boardService.save();
             } else if (selectNo == 2) {
+                boardService.findAll();
 
             } else if (selectNo == 3) {
 
