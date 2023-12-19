@@ -34,4 +34,25 @@ public class BoardRepository {
         }
         return null;
     }
+
+    public boolean update(Long id, String boardTitle, String boardContents) {
+        for (int i = 0; i < boardDTOList.size(); i++) {
+            if (id.equals(boardDTOList.get(i).getId())) {
+                boardDTOList.get(i).setBoardTitle(boardTitle);
+                boardDTOList.get(i).setBoardContents(boardContents);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean delete(Long id) {
+        for (int i = 0; i < boardDTOList.size(); i++) {
+            if (id.equals(boardDTOList.get(i).getId())) {
+                boardDTOList.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }
