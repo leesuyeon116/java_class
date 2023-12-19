@@ -23,6 +23,7 @@ public class BoardService {
             System.out.println("글작성 실패");
         }
     }
+
     public void findAll() {
         List<BoardDTO> boardDTOList = boardRepository.findAll();
         System.out.println("id\t" + "title\t" + "writer\t" + "hits\t");
@@ -33,11 +34,11 @@ public class BoardService {
     }
 
     public void findById() {
-        System.out.println("조회 id: ");
+        System.out.print("조회 id: ");
         Long id = scanner.nextLong();
-        //  1. 조회수를 1 증가
+        // 1. 조회수를 1 증가
         boolean result = boardRepository.updateHits(id);
-        //  2. 상새내용 가져옴
+        // 2. 상세내용 가져옴
         if (result) {
             BoardDTO boardDTO = boardRepository.findById(id);
             System.out.println("boardDTO = " + boardDTO);
@@ -45,6 +46,7 @@ public class BoardService {
             System.out.println("요청하신 게시글은 존재하지 않습니다!");
         }
     }
+
     public void update() {
         System.out.print("수정할 id: ");
         Long id = scanner.nextLong();
@@ -71,6 +73,43 @@ public class BoardService {
             }
         } else {
             System.out.println("요청하신 게시글은 존재하지 않습니다!");
+        }
+    }
+
+    public void delete() {
+        System.out.print("수정할 id: ");
+        Long id = scanner.nextLong();
+        System.out.print("비밀번호: ");
+        String boardPass = scanner.next();
+        BoardDTO boardDTO = boardRepository.findById(id);
+        if (boardDTO != null) {
+            if (boardPass.equals(boardDTO.getBoardPass())) {
+                boolean result = boardRepository.delete(id);
+                if (result) {
+                    System.out.println("삭제 완료");
+                } else {
+                    System.out.println("삭제 실패");
+                }
+            } else {
+                System.out.println("비밀번호가 일치하지 않습니다!");
+            }
+            System.out.println("요청하신 게시글은 존재하지 않습니다!");
+        }
+    }
+
+    public void search() {
+        System.out.print("검색어: ");
+        String q = scanner.next();
+        List<BoardDTO> searchList = boardRepository.search(q);
+        if (searchList.size() > 0) {
+            System.out.println("검색 결과");
+            System.out.println("id\t" + "title\t" + "writer\t" + "hits\t");
+            for (BoardDTO boardDTO: searchList) {
+                System.out.println(boardDTO.getId() + "\t" + boardDTO.getBoardTitle() + "\t" +
+                        boardDTO.getBoardWriter() + "\t" + boardDTO.getBoardHits() + "\t");
+            }
+        } else {
+            System.out.println("검색결과가 없습니다!");
         }
     }
 }
