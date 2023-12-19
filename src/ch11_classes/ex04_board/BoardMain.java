@@ -27,7 +27,6 @@ public class BoardMain {
                 boardService.delete();
             } else if (selectNo == 6) {
                 boardService.search();
-
             } else if (selectNo == 0) {
                 run = false;
             }
