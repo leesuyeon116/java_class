@@ -112,4 +112,21 @@ public class BoardService {
             System.out.println("검색결과가 없습니다!");
         }
     }
+    // 목록 출력 전용 메서드
+    // findAll, search 메서드로 부터 list 데이터를 전달 받아서 출력을 하는 메서드
+    private void listPrint(List<BoardDTO> boardDTOList) {
+        System.out.println("id\t" + "title\t" + "writer\t" + "hits\t" + "date\t");
+        for (BoardDTO boardDTO: boardDTOList) {
+            System.out.println(boardDTO.getId() + "\t" + boardDTO.getBoardTitle() + "\t" +
+                    boardDTO.getBoardWriter() + "\t" + boardDTO.getBoardHits() + "\t" +
+                    boardDTO.getCreatedAt() + "\t");
+        }
+    }
+
+    public void testData() {
+        for (int i = 1; i < 11; i++) {
+            BoardDTO boardDTO = new BoardDTO("title" + i, "writer" + i, "1234", "contents" + i);
+            boardRepository.save(boardDTO);
+        }
+    }
 }
