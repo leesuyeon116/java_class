@@ -41,7 +41,7 @@ public class BookRepository {
      *      Service로 부터 id를 전달받고 일치하는 결과를 찾아서 DTO를 리턴
      *      없으면 null 리턴
      */
-    public BookDTO findById(Long id) {
+    public BookDTO findById(Long id) {      //  조회기능
         BookDTO bookDTO = null;
 //        for (int i = 0; i < bookDTOList.size(); i++) {
 //            if (id.equals(bookDTOList.get(i).getId())) {
