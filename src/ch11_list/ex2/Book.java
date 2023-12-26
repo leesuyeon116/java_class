@@ -1,4 +1,4 @@
-package ch11_array.ex2;
+package ch11_list.ex2;
 /**
  책 클래스
 
