@@ -29,7 +29,7 @@ public class StudentService {
      */
     public void method3() {
         System.out.println("StudentService.method3");
-        StudentDTO studentDTO = new StudentDTO("학생1", "20231215", "문헌정보학", "010-1234-5678");
+        StudentDTO studentDTO = new StudentDTO("학생1", "20231111", "컴퓨터공학", "010-1111-1111");
 //        StudentDTO studentDTO = new StudentDTO();
         boolean result = studentRepository.method3(studentDTO);
         System.out.println("result = " + result);
