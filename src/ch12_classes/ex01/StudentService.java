@@ -1,8 +1,5 @@
 package ch12_classes.ex01;
 
-import ch11_classes.ex01.StudentDTO;
-import ch11_classes.ex01.StudentRepository;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -32,7 +29,7 @@ public class StudentService {
      */
     public void method3() {
         System.out.println("StudentService.method3");
-        ch11_classes.ex01.StudentDTO studentDTO = new ch11_classes.ex01.StudentDTO("학생1", "20231215", "문헌정보학", "010-1234-5678");
+        StudentDTO studentDTO = new StudentDTO("학생1", "20231215", "문헌정보학", "010-1234-5678");
 //        StudentDTO studentDTO = new StudentDTO();
         boolean result = studentRepository.method3(studentDTO);
         System.out.println("result = " + result);
@@ -47,8 +44,8 @@ public class StudentService {
      * Repository로 부터 List를 리턴 받아 for문으로 출력
      */
     public void method4() {
-        List<ch11_classes.ex01.StudentDTO> studentDTOList = studentRepository.method4();
-        for (ch11_classes.ex01.StudentDTO studentDTO: studentDTOList) {
+        List<StudentDTO> studentDTOList = studentRepository.method4();
+        for (StudentDTO studentDTO: studentDTOList) {
             System.out.println("studentDTO = " + studentDTO);
         }
     }
