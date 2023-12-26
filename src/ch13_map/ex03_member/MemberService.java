@@ -1,6 +1,7 @@
 package ch13_map.ex03_member;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 public class MemberService {
     Scanner scanner = new Scanner(System.in);
@@ -54,9 +55,9 @@ public class MemberService {
     }
 
     public void findAll() {
-        List<MemberDTO> memberDTOList = memberRepository.findAll();
-        for (MemberDTO memberDTO: memberDTOList) {
-            System.out.println("memberDTO = " + memberDTO);
+        Map<Long, MemberDTO> memberDTOMap = memberRepository.findAll();
+        for (Long i : memberDTOMap.keySet()) {
+            System.out.println("memberDTO = " + memberDTOMap.get(i));
         }
     }
 
