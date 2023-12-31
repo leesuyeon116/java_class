@@ -6,7 +6,6 @@ public class BookDTO {
     private String bookAuthor;  // 저자
     private int bookPrice;  // 가격
     private String bookPublisher;   // 출판사
-    private String bookIsbn;    // 국제표준도서번호
 
     public Long getId() {
         return id;
@@ -28,10 +27,6 @@ public class BookDTO {
         return bookPublisher;
     }
 
-    public String getBookIsbn() {
-        return bookIsbn;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -51,22 +46,17 @@ public class BookDTO {
     public void setBookPublisher(String bookPublisher) {
         this.bookPublisher = bookPublisher;
     }
-
-    public void setBookIsbn(String bookIsbn) {
-        this.bookIsbn = bookIsbn;
-    }
     public BookDTO() {
 
     }
     private static Long idValue = 1L;
 
-    public BookDTO(String bookTitle, String bookAuthor, int bookPrice, String bookPublisher, String bookIsbn) {
-        this.id = idValue;
+    public BookDTO(String bookTitle, String bookAuthor, int bookPrice, String bookPublisher) {
+        this.id = idValue++;
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
         this.bookPrice = bookPrice;
         this.bookPublisher = bookPublisher;
-        this.bookIsbn = bookIsbn;
     }
 
     @Override
@@ -77,7 +67,6 @@ public class BookDTO {
                 ", bookAuthor='" + bookAuthor + '\'' +
                 ", bookPrice=" + bookPrice +
                 ", bookPublisher='" + bookPublisher + '\'' +
-                ", bookIsbn='" + bookIsbn + '\'' +
                 '}';
     }
 }
