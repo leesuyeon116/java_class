@@ -71,10 +71,10 @@ public class MemberService {
             if (result) {
                 System.out.println("회원정보가 수정되었습니다.");
             } else {
-                System.out.println("수정 실패!");
+                System.out.println("수정 실패");
             }
         } else {
-            System.out.println("로그인 해주세요!");
+            System.out.println("로그인 해주세요.");
         }
     }
     public void delete() {
